@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AuthenticationView: View {
+struct AuthenticationLabel: View {
    
     let serviceLogo: String
     let serviceName: String
@@ -23,8 +23,8 @@ struct AuthenticationView: View {
     }
 }
 
-struct AuthenticationView_Previews: PreviewProvider {
+struct AuthenticationLabel_Previews: PreviewProvider {
     static var previews: some View {
-        AuthenticationView(serviceLogo: "Name", serviceName: "Apple")
+        AuthenticationLabel(serviceLogo: "Name", serviceName: "Apple")
     }
 }

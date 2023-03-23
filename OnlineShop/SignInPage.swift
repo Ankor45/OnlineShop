@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct SignInPage: View {
-   
+    
     @State private var name: String = ""
     @State private var surname: String = ""
     @State private var eMail: String = ""
+    
+    @State private var isThisEmail: Bool = true
     
     var body: some View {
         VStack {
@@ -23,10 +25,35 @@ struct SignInPage: View {
                     .padding()
                 UserTextField(value: $surname, placeholder: "Last name")
                     .padding()
-                UserTextField(value: $eMail, placeholder: "Email")
-                    .padding()
+                TextField(
+                    "",
+                    text: $eMail,
+                    onEditingChanged: { isChanged in
+                    if !isChanged {
+                        if self.emailValidator(eMail) {
+                            self.isThisEmail = true
+                        } else {
+                            self.isThisEmail = false
+                            eMail = ""
+                        }
+                    }
+                })
+                .ourStyle()
+                .foregroundColor(.black)
+                .placeholder(when: eMail.isEmpty, placeholder: {
+                    Text("Email")
+                        .font(.custom("Montserrat Regular", size: 14))
+                        .foregroundColor(.gray.opacity(0.6))
+                        .offset(x: +132, y: 0)
+                }) .padding()
+                
+                if !self.isThisEmail {
+                    Text("Enter email")
+                        .font(.custom("Montserrat Regular", size: 14))
+                        .foregroundColor(.red)
+                }
             } .padding()
-           
+            
             Button(action: {}) {
                 Text("Sign in").padding()
                     .font(.custom("Montserrat Bold", fixedSize: 16))
@@ -48,12 +75,21 @@ struct SignInPage: View {
             
             
             VStack {
-                AuthenticationView(serviceLogo: "Google", serviceName: "Sign in with Google")
+                AuthenticationLabel(serviceLogo: "Google", serviceName: "Sign in with Google")
                     .padding()
-                AuthenticationView(serviceLogo: "Apple", serviceName: "Sign in with Apple")
+                AuthenticationLabel(serviceLogo: "Apple", serviceName: "Sign in with Apple")
                     .offset(x: -2, y: 0)
             }
         }
+    } // Body
+    
+    func emailValidator(_ string: String) -> Bool {
+        if string.count > 50 {
+            return false
+        }
+        let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailFormat)
+        return emailPredicate.evaluate(with: string)
     }
 }
 

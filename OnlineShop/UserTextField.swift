@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UserTextField: View {
     
+   // @State private var shouldShow: Bool = true
     @Binding var value: String
     
     let placeholder: String
@@ -18,7 +19,6 @@ struct UserTextField: View {
             "Placeholder",
             text: $value,
             prompt: Text("\(placeholder)")
-                .foregroundColor(.black.opacity(0.6))
                 .font(.custom("Montserrat Regular", size: 14))
         )
         .ourStyle()
@@ -45,5 +45,18 @@ extension TextField {
     func ourStyle() -> some View {
         ModifiedContent(content: self, modifier: TextFieldStyle())
         
+    }
+}
+
+extension View {
+    func placeholder<Content: View>(
+        when shouldShow: Bool,
+        alignment: Alignment = .leading,
+        @ViewBuilder placeholder: () -> Content) -> some View {
+
+        ZStack(alignment: alignment) {
+            placeholder().opacity(shouldShow ? 1 : 0)
+            self
+        }
     }
 }
