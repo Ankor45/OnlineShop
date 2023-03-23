@@ -14,6 +14,9 @@
 		9F4018DA29C9EBAC00BD78BA /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F4018D929C9EBAC00BD78BA /* Montserrat-Regular.ttf */; };
 		9F4018DD29C9EC5700BD78BA /* UserTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4018DC29C9EC5700BD78BA /* UserTextField.swift */; };
 		9F4018E329C9F93A00BD78BA /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F4018E229C9F93A00BD78BA /* Montserrat-SemiBold.ttf */; };
+		9FA26AB529CC9DB40097ABD8 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA26AB429CC9DB40097ABD8 /* SignInPage.swift */; };
+		9FA26AB729CCA0D70097ABD8 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA26AB629CCA0D70097ABD8 /* AuthenticationView.swift */; };
+		9FA26AB929CCA42A0097ABD8 /* WelcomeBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA26AB829CCA42A0097ABD8 /* WelcomeBackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		9F4018DB29C9EBC900BD78BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9F4018DC29C9EC5700BD78BA /* UserTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTextField.swift; sourceTree = "<group>"; };
 		9F4018E229C9F93A00BD78BA /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		9FA26AB429CC9DB40097ABD8 /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
+		9FA26AB629CCA0D70097ABD8 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		9FA26AB829CCA42A0097ABD8 /* WelcomeBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 				9F4018DB29C9EBC900BD78BA /* Info.plist */,
 				9F4018CA29C9EB6200BD78BA /* OnlineShopApp.swift */,
 				9F4018CC29C9EB6200BD78BA /* ContentView.swift */,
+				9FA26AB829CCA42A0097ABD8 /* WelcomeBackView.swift */,
+				9FA26AB429CC9DB40097ABD8 /* SignInPage.swift */,
+				9FA26AB629CCA0D70097ABD8 /* AuthenticationView.swift */,
 				9F4018DC29C9EC5700BD78BA /* UserTextField.swift */,
 				9F4018CE29C9EB6300BD78BA /* Assets.xcassets */,
 				9F4018D829C9EB7600BD78BA /* Font */,
@@ -158,9 +167,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA26AB929CCA42A0097ABD8 /* WelcomeBackView.swift in Sources */,
+				9FA26AB529CC9DB40097ABD8 /* SignInPage.swift in Sources */,
 				9F4018CD29C9EB6200BD78BA /* ContentView.swift in Sources */,
 				9F4018CB29C9EB6200BD78BA /* OnlineShopApp.swift in Sources */,
 				9F4018DD29C9EC5700BD78BA /* UserTextField.swift in Sources */,
+				9FA26AB729CCA0D70097ABD8 /* AuthenticationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
