@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProfileView: View {
     
+    @State private var profilePhoto = "Avatar"
+    @State private var profileName = "Satria Abhi Paradana"
     var body: some View {
         VStack {
             Group {
@@ -16,7 +18,7 @@ struct ProfileView: View {
                     .font(.custom("Montserrat SemiBold", size: 22))
                 
                 VStack {
-                    Image("Avatar")
+                    Image("\(profilePhoto)")
                     
                     Button(action: {}) {
                         Text("Change photo")
@@ -25,7 +27,7 @@ struct ProfileView: View {
                     }
                 } .padding(10)
                 
-                Text("Satria Abhi Paradana")
+                Text("\(profileName)")
                     .font(.custom("Montserrat SemiBold", size: 18))
             } // Group
             Button(action: {}) {

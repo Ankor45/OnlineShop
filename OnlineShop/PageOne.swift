@@ -8,9 +8,33 @@
 import SwiftUI
 
 struct PageOne: View {
+    
+    @State private var avatar = "Avatar"
+    
     var body: some View {
-      Text("hi")
-      
+        
+        VStack {
+        
+            NavigationView(profilePhoto: $avatar)
+            
+            CategoryScroll()
+            
+            HStack() {
+            
+                Text("Latest")
+                    .font(.custom("Montserrat SemiBold", size: 22))
+                Spacer()
+                
+                Button(action: {}) {
+                    Text("View all")
+                        .font(.custom("Montserrat Regular", size: 12))
+                        .foregroundColor(.gray)
+                }
+                
+            }.padding()
+            
+            Spacer()
+        }
     }
 }
 

@@ -25,6 +25,6 @@ struct AuthenticationLabel: View {
 
 struct AuthenticationLabel_Previews: PreviewProvider {
     static var previews: some View {
-        AuthenticationLabel(serviceLogo: "Name", serviceName: "Apple")
+        AuthenticationLabel(serviceLogo: "Apple", serviceName: "Apple")
     }
 }
