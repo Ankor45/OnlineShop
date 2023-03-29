@@ -19,10 +19,12 @@
 		9F77ABA729D2136900BAFE8A /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77ABA629D2136900BAFE8A /* ProfileButton.swift */; };
 		9F77ABAA29D2176C00BAFE8A /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F77ABA829D2176C00BAFE8A /* Montserrat-Bold.ttf */; };
 		9F77ABAB29D2176C00BAFE8A /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F77ABA929D2176C00BAFE8A /* Montserrat-Medium.ttf */; };
+		9F7B131B29D47A970001A0DD /* LatestProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B131A29D47A970001A0DD /* LatestProduct.swift */; };
+		9F7B131D29D4987B0001A0DD /* LatestScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7B131C29D4987B0001A0DD /* LatestScroll.swift */; };
 		9FA26AB529CC9DB40097ABD8 /* SignInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA26AB429CC9DB40097ABD8 /* SignInPage.swift */; };
 		9FA26AB729CCA0D70097ABD8 /* AuthenticationLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA26AB629CCA0D70097ABD8 /* AuthenticationLabel.swift */; };
 		9FA26AB929CCA42A0097ABD8 /* WelcomeBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA26AB829CCA42A0097ABD8 /* WelcomeBackView.swift */; };
-		9FB50D5929D30E6D00B96C74 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB50D5829D30E6D00B96C74 /* NavigationView.swift */; };
+		9FB50D5929D30E6D00B96C74 /* NavigationPageOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB50D5829D30E6D00B96C74 /* NavigationPageOne.swift */; };
 		9FB50D5B29D33A4E00B96C74 /* LatestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB50D5A29D33A4E00B96C74 /* LatestModel.swift */; };
 		9FB50D5D29D33BC500B96C74 /* LatestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB50D5C29D33BC500B96C74 /* LatestViewModel.swift */; };
 		9FB50D5F29D34B7800B96C74 /* CategoryScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB50D5E29D34B7800B96C74 /* CategoryScroll.swift */; };
@@ -44,10 +46,12 @@
 		9F77ABA629D2136900BAFE8A /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
 		9F77ABA829D2176C00BAFE8A /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		9F77ABA929D2176C00BAFE8A /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		9F7B131A29D47A970001A0DD /* LatestProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestProduct.swift; sourceTree = "<group>"; };
+		9F7B131C29D4987B0001A0DD /* LatestScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestScroll.swift; sourceTree = "<group>"; };
 		9FA26AB429CC9DB40097ABD8 /* SignInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPage.swift; sourceTree = "<group>"; };
 		9FA26AB629CCA0D70097ABD8 /* AuthenticationLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationLabel.swift; sourceTree = "<group>"; };
 		9FA26AB829CCA42A0097ABD8 /* WelcomeBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackView.swift; sourceTree = "<group>"; };
-		9FB50D5829D30E6D00B96C74 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		9FB50D5829D30E6D00B96C74 /* NavigationPageOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPageOne.swift; sourceTree = "<group>"; };
 		9FB50D5A29D33A4E00B96C74 /* LatestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestModel.swift; sourceTree = "<group>"; };
 		9FB50D5C29D33BC500B96C74 /* LatestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestViewModel.swift; sourceTree = "<group>"; };
 		9FB50D5E29D34B7800B96C74 /* CategoryScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryScroll.swift; sourceTree = "<group>"; };
@@ -87,12 +91,7 @@
 				9F4018DB29C9EBC900BD78BA /* Info.plist */,
 				9F4018CA29C9EB6200BD78BA /* OnlineShopApp.swift */,
 				9F4018CC29C9EB6200BD78BA /* ContentView.swift */,
-				9F77ABA029D1FBE700BAFE8A /* PageOne.swift */,
-				9FB50D5829D30E6D00B96C74 /* NavigationView.swift */,
-				9FB50D5E29D34B7800B96C74 /* CategoryScroll.swift */,
-				9FB50D6029D3551E00B96C74 /* CategoryModel.swift */,
-				9FB50D5A29D33A4E00B96C74 /* LatestModel.swift */,
-				9FB50D5C29D33BC500B96C74 /* LatestViewModel.swift */,
+				9F7B131929D47A580001A0DD /* PageOne */,
 				9FB50D5729D30B0500B96C74 /* Welcome back */,
 				9FB50D5629D30ADD00B96C74 /* Sign in */,
 				9FB50D5529D30AB400B96C74 /* Profile */,
@@ -120,6 +119,21 @@
 				9F77ABA929D2176C00BAFE8A /* Montserrat-Medium.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		9F7B131929D47A580001A0DD /* PageOne */ = {
+			isa = PBXGroup;
+			children = (
+				9F77ABA029D1FBE700BAFE8A /* PageOne.swift */,
+				9FB50D5829D30E6D00B96C74 /* NavigationPageOne.swift */,
+				9FB50D5E29D34B7800B96C74 /* CategoryScroll.swift */,
+				9FB50D6029D3551E00B96C74 /* CategoryModel.swift */,
+				9F7B131C29D4987B0001A0DD /* LatestScroll.swift */,
+				9F7B131A29D47A970001A0DD /* LatestProduct.swift */,
+				9FB50D5A29D33A4E00B96C74 /* LatestModel.swift */,
+				9FB50D5C29D33BC500B96C74 /* LatestViewModel.swift */,
+			);
+			path = PageOne;
 			sourceTree = "<group>";
 		};
 		9FB50D5529D30AB400B96C74 /* Profile */ = {
@@ -228,9 +242,11 @@
 				9F77ABA129D1FBE700BAFE8A /* PageOne.swift in Sources */,
 				9FA26AB929CCA42A0097ABD8 /* WelcomeBackView.swift in Sources */,
 				9F77ABA729D2136900BAFE8A /* ProfileButton.swift in Sources */,
-				9FB50D5929D30E6D00B96C74 /* NavigationView.swift in Sources */,
+				9FB50D5929D30E6D00B96C74 /* NavigationPageOne.swift in Sources */,
 				9FB50D5D29D33BC500B96C74 /* LatestViewModel.swift in Sources */,
+				9F7B131B29D47A970001A0DD /* LatestProduct.swift in Sources */,
 				9FA26AB529CC9DB40097ABD8 /* SignInPage.swift in Sources */,
+				9F7B131D29D4987B0001A0DD /* LatestScroll.swift in Sources */,
 				9F4018CD29C9EB6200BD78BA /* ContentView.swift in Sources */,
 				9F4018CB29C9EB6200BD78BA /* OnlineShopApp.swift in Sources */,
 				9FB50D5B29D33A4E00B96C74 /* LatestModel.swift in Sources */,
@@ -375,6 +391,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -382,9 +399,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Kovryzhenko.OnlineShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -406,6 +426,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -413,9 +434,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Kovryzhenko.OnlineShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct Array: Codable {
+    
+    let latest: [Latest]
+}
 
 struct Latest: Codable {
     

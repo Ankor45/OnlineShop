@@ -15,7 +15,7 @@ struct PageOne: View {
         
         VStack {
         
-            NavigationView(profilePhoto: $avatar)
+            NavigationPageOne(profilePhoto: $avatar)
             
             CategoryScroll()
             
@@ -32,6 +32,8 @@ struct PageOne: View {
                 }
                 
             }.padding()
+            
+            LatestScroll()
             
             Spacer()
         }

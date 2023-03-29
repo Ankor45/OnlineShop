@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NavigationView: View {
+struct NavigationPageOne: View {
     
     @Binding var profilePhoto: String
     
@@ -64,8 +64,8 @@ struct NavigationView: View {
     } // Body
 }
 
-struct NavigationView_Previews: PreviewProvider {
+struct NavigationPageOne_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView(profilePhoto: .constant("Avatar"))
+        NavigationPageOne(profilePhoto: .constant("Avatar"))
     }
 }
