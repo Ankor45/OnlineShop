@@ -23,6 +23,7 @@ struct SignInPage: View {
             VStack {
                 UserTextField(value: $name, placeholder: "First name")
                     .padding()
+                
                 UserTextField(value: $surname, placeholder: "Last name")
                     .padding()
                 TextField(
@@ -46,8 +47,12 @@ struct SignInPage: View {
                         .foregroundColor(.gray.opacity(0.6))
                         .offset(x: +132, y: 0)
                 }) .padding()
+                    .onSubmit {
+                        eMail = ""
+                    }
                 
                 if !self.isThisEmail {
+                    
                     Text("Enter email")
                         .font(.custom("Montserrat Regular", size: 14))
                         .foregroundColor(.red)
@@ -80,10 +85,12 @@ struct SignInPage: View {
                 AuthenticationLabel(serviceLogo: "Apple", serviceName: "Sign in with Apple")
                     .offset(x: -2, y: 0)
             }
+            
         }
+        
     } // Body
     
-    func emailValidator(_ string: String) -> Bool {
+  private func emailValidator(_ string: String) -> Bool {
         if string.count > 50 {
             return false
         }

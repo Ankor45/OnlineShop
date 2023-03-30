@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CategoryScroll: View {
+    
     var body: some View {
                 
         ScrollView(.horizontal, showsIndicators: false) {
@@ -33,7 +34,7 @@ struct CategoryScroll: View {
                     }
                 }
             }
-        }.padding(.vertical)
+        }.padding(.vertical, 10)
     }
 }
 

@@ -53,7 +53,7 @@ struct ProfileView: View {
                 ProfileButton(buttonIcon: "RestoreIcon", buttonText: "Restore Purchase", buttonSecondIcon: "Chevron")
                 ProfileButton(buttonIcon: "HelpIco", buttonText: "Help", buttonSecondIcon: "")
                 ProfileButton(buttonIcon: "LogOutIco", buttonText: "Log out", buttonSecondIcon: "")
-               // Spacer()
+                Spacer()
             }
         } .padding()// VStack
     } //Body

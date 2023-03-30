@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NavigationPageOne: View {
     
+    @State private var searchText = ""
     @Binding var profilePhoto: String
     
     var body: some View {
@@ -55,9 +56,22 @@ struct NavigationPageOne: View {
                 })
             )
             .padding()
-            // MARK затычка потом поменяй
-            UserTextField(value: $profilePhoto , placeholder: "Search")
-                
+            
+            ZStack {
+                HStack {
+                    
+                UserTextField(value: $searchText, placeholder: "What are you looking for ?")
+                        .onSubmit {
+                            searchText = ""
+                        }
+                Image(systemName: "magnifyingglass")
+                        .resizable()
+                        .frame(width: 12, height: 12)
+                    .foregroundColor(.gray)
+                    .offset(x: -40)
+            }
+        }
+            
             
             
         } // VStack

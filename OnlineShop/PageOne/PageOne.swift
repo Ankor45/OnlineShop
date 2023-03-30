@@ -13,29 +13,37 @@ struct PageOne: View {
     
     var body: some View {
         
-        VStack {
-        
-            NavigationPageOne(profilePhoto: $avatar)
+        ZStack {
             
-            CategoryScroll()
+            Color("Bacground")
+                .ignoresSafeArea()
             
-            HStack() {
-            
-                Text("Latest")
-                    .font(.custom("Montserrat SemiBold", size: 22))
-                Spacer()
+            VStack {
                 
-                Button(action: {}) {
-                    Text("View all")
-                        .font(.custom("Montserrat Regular", size: 12))
-                        .foregroundColor(.gray)
+                NavigationPageOne(profilePhoto: $avatar)
+                
+                CategoryScroll()
+                
+                ScrollView(.vertical, showsIndicators: false) {
+                    
+                    VStack {
+                        
+                        CategoryViewAll(category: "Latest")
+                        
+                        LatestScroll()
+                        
+                        CategoryViewAll(category: "Flash sale")
+                        
+                        FinalSaleScroll()
+                        
+                        CategoryViewAll(category: "Brands")
+                        
+                        BrandScroll()
+                        
+                        Spacer()
+                    }
                 }
-                
-            }.padding()
-            
-            LatestScroll()
-            
-            Spacer()
+            }
         }
     }
 }
@@ -43,5 +51,26 @@ struct PageOne: View {
 struct PageOne_Previews: PreviewProvider {
     static var previews: some View {
         PageOne()
+    }
+}
+
+struct CategoryViewAll: View {
+    
+    let category: String
+    
+    var body: some View {
+        HStack() {
+            
+            Text(category)
+                .font(.custom("Montserrat SemiBold", size: 22))
+            Spacer()
+            
+            Button(action: {}) {
+                Text("View all")
+                    .font(.custom("Montserrat Regular", size: 12))
+                    .foregroundColor(.gray)
+            }
+            
+        }.padding(10)
     }
 }
