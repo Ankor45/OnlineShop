@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
-    
+    @EnvironmentObject var user: UserManager
     @State private var profilePhoto = "Avatar"
     @State private var profileName = "Satria Abhi Paradana"
     var body: some View {
@@ -46,17 +46,23 @@ struct ProfileView: View {
             } .padding()
             VStack {
                 
-                ProfileButton(buttonIcon: "CardIcon", buttonText: "Trade store", buttonSecondIcon: "Chevron")
-                ProfileButton(buttonIcon: "CardIcon", buttonText: "Payment metod", buttonSecondIcon: "Chevron")
-                ProfileButton(buttonIcon: "CardIcon", buttonText: "Balance", buttonSecondIcon: "Chevron")
-                ProfileButton(buttonIcon: "CardIcon", buttonText: "Trade history", buttonSecondIcon: "CashIco")
-                ProfileButton(buttonIcon: "RestoreIcon", buttonText: "Restore Purchase", buttonSecondIcon: "Chevron")
-                ProfileButton(buttonIcon: "HelpIco", buttonText: "Help", buttonSecondIcon: "")
-                ProfileButton(buttonIcon: "LogOutIco", buttonText: "Log out", buttonSecondIcon: "")
+                ProfileButton(buttonIcon: "CardIcon", buttonText: "Trade store", buttonSecondIcon: "Chevron", buttonAction: {})
+                ProfileButton(buttonIcon: "CardIcon", buttonText: "Payment metod", buttonSecondIcon: "Chevron", buttonAction: {})
+                ProfileButton(buttonIcon: "CardIcon", buttonText: "Balance", buttonSecondIcon: "Chevron", buttonAction: {})
+                ProfileButton(buttonIcon: "CardIcon", buttonText: "Trade history", buttonSecondIcon: "CashIco", buttonAction: {})
+                ProfileButton(buttonIcon: "RestoreIcon", buttonText: "Restore Purchase", buttonSecondIcon: "Chevron", buttonAction: {})
+                ProfileButton(buttonIcon: "HelpIco", buttonText: "Help", buttonSecondIcon: "", buttonAction: {})
+                ProfileButton(buttonIcon: "LogOutIco", buttonText: "Log out", buttonSecondIcon: "", buttonAction: logOut)
                 Spacer()
             }
         } .padding()// VStack
     } //Body
+    private func logOut() {
+        user.openTabBar.toggle()
+        if user.isRegister {
+            user.isRegister.toggle()
+        }
+    }
 }
 
 struct ProfileView_Previews: PreviewProvider {

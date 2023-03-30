@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SignInPage: View {
     
+    @EnvironmentObject var user: UserManager
     @State private var name: String = ""
     @State private var surname: String = ""
     @State private var eMail: String = ""
@@ -35,7 +36,7 @@ struct SignInPage: View {
                             self.isThisEmail = true
                         } else {
                             self.isThisEmail = false
-                            eMail = ""
+                            
                         }
                     }
                 })
@@ -48,7 +49,9 @@ struct SignInPage: View {
                         .offset(x: +132, y: 0)
                 }) .padding()
                     .onSubmit {
-                        eMail = ""
+                        if !isThisEmail {
+                            eMail = ""
+                        }
                     }
                 
                 if !self.isThisEmail {
@@ -59,7 +62,7 @@ struct SignInPage: View {
                 }
             } .padding()
             
-            Button(action: {}) {
+            Button(action: registerUser) {
                 Text("Sign in").padding()
                     .font(.custom("Montserrat Bold", fixedSize: 16))
                     .frame(width: 300, height: 50)
@@ -72,7 +75,7 @@ struct SignInPage: View {
                     .font(.custom("Montserrat Regular", size: 12))
                     .foregroundColor(.gray)
                 
-                Button(action: {}) {
+                Button(action: loginIsOn) {
                     Text("Log in")
                         .font(.custom("Montserrat Regular", size: 12))
                 }
@@ -89,6 +92,16 @@ struct SignInPage: View {
         }
         
     } // Body
+    private func registerUser() {
+        if !name.isEmpty && !surname.isEmpty && isThisEmail {
+            user.name = name
+            user.openTabBar.toggle()
+        }
+    }
+    
+    private func loginIsOn() {
+        user.isRegister.toggle()
+    }
     
   private func emailValidator(_ string: String) -> Bool {
         if string.count > 50 {

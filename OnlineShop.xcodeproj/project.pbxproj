@@ -36,6 +36,7 @@
 		9FD522A529D5DB0700415DF8 /* BrandModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD522A429D5DB0700415DF8 /* BrandModel.swift */; };
 		9FD522A729D5DB5A00415DF8 /* BrandScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD522A629D5DB5A00415DF8 /* BrandScroll.swift */; };
 		9FD522A929D5E44E00415DF8 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD522A829D5E44E00415DF8 /* CustomTabBar.swift */; };
+		9FD522AB29D622E300415DF8 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD522AA29D622E300415DF8 /* UserManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		9FD522A429D5DB0700415DF8 /* BrandModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandModel.swift; sourceTree = "<group>"; };
 		9FD522A629D5DB5A00415DF8 /* BrandScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandScroll.swift; sourceTree = "<group>"; };
 		9FD522A829D5E44E00415DF8 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		9FD522AA29D622E300415DF8 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				9F4018DB29C9EBC900BD78BA /* Info.plist */,
 				9F4018CA29C9EB6200BD78BA /* OnlineShopApp.swift */,
 				9F4018CC29C9EB6200BD78BA /* ContentView.swift */,
+				9FD522AA29D622E300415DF8 /* UserManager.swift */,
 				9F7B131929D47A580001A0DD /* PageOne */,
 				9FB50D5729D30B0500B96C74 /* Welcome back */,
 				9FB50D5629D30ADD00B96C74 /* Sign in */,
@@ -296,6 +299,7 @@
 				9FD5229B29D5C63400415DF8 /* FinalSaleModel.swift in Sources */,
 				9F77ABA129D1FBE700BAFE8A /* PageOne.swift in Sources */,
 				9FD522A929D5E44E00415DF8 /* CustomTabBar.swift in Sources */,
+				9FD522AB29D622E300415DF8 /* UserManager.swift in Sources */,
 				9FA26AB929CCA42A0097ABD8 /* WelcomeBackView.swift in Sources */,
 				9FD522A729D5DB5A00415DF8 /* BrandScroll.swift in Sources */,
 				9FD522A529D5DB0700415DF8 /* BrandModel.swift in Sources */,

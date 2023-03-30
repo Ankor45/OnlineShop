@@ -12,11 +12,12 @@ struct ProfileButton: View {
     let buttonIcon: String
     let buttonText: String
     let buttonSecondIcon: String
+    var buttonAction: () -> Void
     
     var body: some View {
         
         
-        Button(action: {}) {
+        Button(action: buttonAction) {
             HStack {
                 Image("\(buttonIcon)")
                     .padding()
@@ -37,6 +38,6 @@ struct ProfileButton: View {
 
 struct ProfileButton_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileButton(buttonIcon: "CardIcon", buttonText: "Button's text", buttonSecondIcon: "Chevron")
+        ProfileButton(buttonIcon: "CardIcon", buttonText: "Button's text", buttonSecondIcon: "Chevron", buttonAction: {})
     }
 }
