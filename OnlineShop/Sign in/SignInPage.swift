@@ -94,7 +94,7 @@ struct SignInPage: View {
     } // Body
     private func registerUser() {
         if !name.isEmpty && !surname.isEmpty && isThisEmail {
-            user.name = name
+            user.name.append(name)
             user.openTabBar.toggle()
         }
     }

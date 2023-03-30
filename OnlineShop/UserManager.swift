@@ -10,5 +10,5 @@ import Combine
 class UserManager: ObservableObject {
     @Published var isRegister = false
     @Published var openTabBar = false
-    var name = ""
+    var name = ["Tim"]
 }
