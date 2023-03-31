@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import Combine
 
 final class LatestViewModel: ObservableObject {
     
     @Published var latestProducts: [Latest] = []
-    
+    @Published var latestIsEmpty = false
     func fetchLatestProduct() {
         
         let urlLatest = "https://run.mocky.io/v3/cc0071a1-f06e-48fa-9e90-b1c2a61eaca7"
@@ -25,6 +26,9 @@ final class LatestViewModel: ObservableObject {
             do {
                 let latestProducts = try JSONDecoder().decode(Array.self, from: data)
                 DispatchQueue.main.async {
+                    if latestProducts.latest.isEmpty {
+                        self?.latestIsEmpty.toggle()
+                    }
                     self?.latestProducts = latestProducts.latest
                 }
             }
@@ -33,5 +37,6 @@ final class LatestViewModel: ObservableObject {
             }
         }
         task.resume()
+        
     }
 }

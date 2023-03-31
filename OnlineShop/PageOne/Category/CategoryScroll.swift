@@ -18,8 +18,7 @@ struct CategoryScroll: View {
                 ForEach(categories){ category in
                     
                     HStack(spacing: 10) {
-                        
-                            
+                          
                             Button(action: {}) {
                                 VStack {
                                 
@@ -34,7 +33,9 @@ struct CategoryScroll: View {
                     }
                 }
             }
-        }.padding(.vertical, 10)
+        }
+        .padding(.vertical, 10)
+        .padding(.horizontal, 5)
     }
 }
 

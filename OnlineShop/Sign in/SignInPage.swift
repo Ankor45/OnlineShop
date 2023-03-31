@@ -10,10 +10,11 @@ import SwiftUI
 struct SignInPage: View {
     
     @EnvironmentObject var user: UserManager
+    
     @State private var name: String = ""
     @State private var surname: String = ""
     @State private var eMail: String = ""
-    
+    @State private var alertPresented: Bool = false
     @State private var isThisEmail: Bool = true
     
     var body: some View {
@@ -63,6 +64,7 @@ struct SignInPage: View {
             } .padding()
             
             Button(action: registerUser) {
+                
                 Text("Sign in").padding()
                     .font(.custom("Montserrat Bold", fixedSize: 16))
                     .frame(width: 300, height: 50)
@@ -70,6 +72,10 @@ struct SignInPage: View {
                     .foregroundColor(.white)
                     .cornerRadius(16)
             }
+            .alert(isPresented: $alertPresented) {
+                Alert(title: Text("Oops"), message: Text("This email is already registered"))
+            }
+            
             HStack {
                 Text("Already have an account?")
                     .font(.custom("Montserrat Regular", size: 12))
@@ -78,6 +84,7 @@ struct SignInPage: View {
                 Button(action: loginIsOn) {
                     Text("Log in")
                         .font(.custom("Montserrat Regular", size: 12))
+                    
                 }
             }.offset(x: -45, y: 0)
             
@@ -88,14 +95,26 @@ struct SignInPage: View {
                 AuthenticationLabel(serviceLogo: "Apple", serviceName: "Sign in with Apple")
                     .offset(x: -2, y: 0)
             }
-            
+            .padding(.top, 40)
+            Spacer()
         }
-        
+        .padding(.top, 50)
     } // Body
     private func registerUser() {
-        if !name.isEmpty && !surname.isEmpty && isThisEmail {
+        
+        guard !user.eMail.contains(eMail) else {
+            alertPresented.toggle()
+            return
+        }
+        
+        
+        if !name.isEmpty && !surname.isEmpty && isThisEmail  {
+            
             user.name.append(name)
+            user.eMail.append(eMail)
+            
             user.openTabBar.toggle()
+            
         }
     }
     

@@ -10,6 +10,7 @@ import SwiftUI
 struct PageOne: View {
     
     @State private var avatar = "Avatar"
+    @Binding var selectTab: String
     
     var body: some View {
         
@@ -20,7 +21,7 @@ struct PageOne: View {
             
             VStack {
                 
-                NavigationPageOne(profilePhoto: $avatar)
+                NavigationPageOne(profilePhoto: $avatar, selectTab: $selectTab)
                 
                 CategoryScroll()
                 
@@ -44,13 +45,14 @@ struct PageOne: View {
                     }
                 }
             }
+            .padding(.top, 4)
         }
     }
 }
 
 struct PageOne_Previews: PreviewProvider {
     static var previews: some View {
-        PageOne()
+        PageOne(selectTab: .constant(""))
     }
 }
 
@@ -59,6 +61,7 @@ struct CategoryViewAll: View {
     let category: String
     
     var body: some View {
+        
         HStack() {
             
             Text(category)
@@ -71,6 +74,8 @@ struct CategoryViewAll: View {
                     .foregroundColor(.gray)
             }
             
-        }.padding(10)
+        }
+        .padding(10)
+        .padding(.horizontal, 5)
     }
 }

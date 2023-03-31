@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import Combine
 
 final class FinalSaleViewModel: ObservableObject {
     
     @Published var finalSaleProducts: [Products] = []
+    
     
     func fetchFinalSaleProducts() {
         
@@ -35,6 +37,8 @@ final class FinalSaleViewModel: ObservableObject {
             }
         }
         task.resume()
+        
+        
     }
     
 }

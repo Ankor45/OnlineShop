@@ -11,6 +11,7 @@ struct NavigationPageOne: View {
     
     @State private var searchText = ""
     @Binding var profilePhoto: String
+    @Binding var selectTab: String
     
     var body: some View {
         
@@ -26,7 +27,9 @@ struct NavigationPageOne: View {
                 
                 VStack {
                     
-                    Button(action: {}) {
+                    Button(action: {
+                        goProfile()
+                    }) {
                         Image("\(profilePhoto)")
                             .resizable()
                             .frame(width: 40, height: 40)
@@ -42,8 +45,6 @@ struct NavigationPageOne: View {
                             .resizable()
                             .frame(width: 8, height: 5)
                     }
-                    
-                    
                 } // VStack
             } // HStack
             .overlay (
@@ -60,26 +61,27 @@ struct NavigationPageOne: View {
             ZStack {
                 HStack {
                     
-                UserTextField(value: $searchText, placeholder: "What are you looking for ?")
+                    UserTextField(value: $searchText, placeholder: "What are you looking for ?")
                         .onSubmit {
                             searchText = ""
                         }
-                Image(systemName: "magnifyingglass")
+                    Image(systemName: "magnifyingglass")
                         .resizable()
                         .frame(width: 12, height: 12)
-                    .foregroundColor(.gray)
-                    .offset(x: -40)
+                        .foregroundColor(.gray)
+                        .offset(x: -40)
+                }
             }
-        }
-            
-            
-            
-        } // VStack
+        } .padding(.top, 2)// VStack
     } // Body
+    
+    private func goProfile() {
+        selectTab = "ProfileIco"
+    }
 }
 
 struct NavigationPageOne_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationPageOne(profilePhoto: .constant("Avatar"))
+        NavigationPageOne(profilePhoto: .constant("Avatar"), selectTab: .constant(""))
     }
 }
