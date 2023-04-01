@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F0279EC29D708A600DC9635 /* CheckData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0279EB29D708A600DC9635 /* CheckData.swift */; };
 		9F4018CB29C9EB6200BD78BA /* OnlineShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4018CA29C9EB6200BD78BA /* OnlineShopApp.swift */; };
 		9F4018CD29C9EB6200BD78BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4018CC29C9EB6200BD78BA /* ContentView.swift */; };
 		9F4018CF29C9EB6300BD78BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F4018CE29C9EB6300BD78BA /* Assets.xcassets */; };
@@ -41,7 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9F0279EB29D708A600DC9635 /* CheckData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckData.swift; sourceTree = "<group>"; };
 		9F4018C729C9EB6200BD78BA /* OnlineShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F4018CA29C9EB6200BD78BA /* OnlineShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineShopApp.swift; sourceTree = "<group>"; };
 		9F4018CC29C9EB6200BD78BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 				9F77ABA029D1FBE700BAFE8A /* PageOne.swift */,
 				9FB50D5829D30E6D00B96C74 /* NavigationPageOne.swift */,
 				9FD522A829D5E44E00415DF8 /* CustomTabBar.swift */,
-				9F0279EB29D708A600DC9635 /* CheckData.swift */,
 				9FD522A329D5DAEB00415DF8 /* Category */,
 				9FD522A229D5D94C00415DF8 /* Brands */,
 				9FD5229929D5C60D00415DF8 /* FinalSale */,
@@ -313,7 +310,6 @@
 				9FD522A129D5D69200415DF8 /* FinalSaleScroll.swift in Sources */,
 				9FA26AB529CC9DB40097ABD8 /* SignInPage.swift in Sources */,
 				9F7B131D29D4987B0001A0DD /* LatestScroll.swift in Sources */,
-				9F0279EC29D708A600DC9635 /* CheckData.swift in Sources */,
 				9F4018CD29C9EB6200BD78BA /* ContentView.swift in Sources */,
 				9F4018CB29C9EB6200BD78BA /* OnlineShopApp.swift in Sources */,
 				9FB50D5B29D33A4E00B96C74 /* LatestModel.swift in Sources */,
