@@ -108,7 +108,7 @@ struct SignInPage: View {
         }
         
         
-        if !name.isEmpty && !surname.isEmpty && isThisEmail  {
+        if !name.isEmpty && !surname.isEmpty && !eMail.isEmpty && isThisEmail  {
             
             user.name.append(name)
             user.eMail.append(eMail)
